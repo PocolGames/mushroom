@@ -68,9 +68,27 @@
       background: #005bb5;
     }
 
+    /*타이틀 시작*/
+    .products-title {
+      text-align: left;
+      padding: 20px 40px;
+      margin-top: 100px;
+    }
+    .products-title h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .products-title p {
+      font-size: 16px;
+      color: #555;
+    }
+    /*타이틀 끝*/
+
+    /*스크롤 컨테이너*/
     .products-scroll {
       overflow: hidden;
-      padding: 80px 20px;
+      padding: 0px 20px;
     }
 
     .scroll-container {
@@ -167,9 +185,38 @@
   </header>
 
   <section class="hero">
-    <h1>최신 상품을 만나보세요</h1>
-    <p>고품질 제품과 최고의 경험을 제공합니다.</p>
+    <h1>세상에 단 하나, 당신의 디지털 조각</h1>
+    <p>우연이 만들어낸 아름다움. 예술로 재탄생한 희귀 수집품을 만나보세요.</p>
     <a href="#" class="cta-button">자세히 보기</a>
+  </section>
+
+  <section class="products-title">
+    <h2>🔥 지금 인기 있는 아이템</h2>
+    <p>유저들이 직접 제작한 독창적인 NFT 아이템들을 둘러보세요.</p>
+  </section>
+
+  <section class="products-scroll">
+    <div class="scroll-container">
+      <button class="scroll-btn left">&lt;</button>
+      <div class="product-track">
+        <!-- 제품 카드 예시 -->
+        <div class="product"><img src="image/01m.png"><h2>제품명 1</h2><p>설명</p></div>
+        <div class="product"><img src="image/02m.png"><h2>제품명 2</h2><p>설명</p></div>
+        <div class="product"><img src="image/03m.png"><h2>제품명 3</h2><p>설명</p></div>
+        <div class="product"><img src="image/04m.png"><h2>제품명 4</h2><p>설명</p></div>
+        <div class="product"><img src="image/05m.png"><h2>제품명 5</h2><p>설명</p></div>
+        <div class="product"><img src="image/06m.png"><h2>제품명 6</h2><p>설명</p></div>
+        <div class="product"><img src="image/07m.png"><h2>제품명 7</h2><p>설명</p></div>
+        <div class="product"><img src="image/08m.png"><h2>제품명 8</h2><p>설명</p></div>
+        <div class="product"><img src="image/09m.png"><h2>제품명 9</h2><p>설명</p></div>
+      </div>
+      <button class="scroll-btn right">&gt;</button>
+    </div>
+  </section>
+
+  <section class="products-title">
+    <h2>조회 수 급상승 아이템</h2>
+    <p>최근 조회 수가 가장 많은 NFT 아이템들을 둘러보세요.</p>
   </section>
 
   <section class="products-scroll">
@@ -195,33 +242,35 @@
     <p>&copy; 2025 모든 권리 보유.</p>
   </footer>
 
-  <script>
+  <<script>
     document.addEventListener('DOMContentLoaded', function () {
-      const container = document.querySelector('.product-track');
-      const scrollContainer = document.querySelector('.scroll-container');
-      const leftBtn = document.querySelector('.scroll-btn.left');
-      const rightBtn = document.querySelector('.scroll-btn.right');
+    const containers = document.querySelectorAll('.scroll-container');
 
-      if (container && leftBtn && rightBtn && scrollContainer) {
-        scrollContainer.addEventListener('mouseenter', () => {
-          leftBtn.classList.add('visible');
-          rightBtn.classList.add('visible');
-        });
+    containers.forEach(container => {
+      const track = container.querySelector('.product-track');
+      const leftBtn = container.querySelector('.scroll-btn.left');
+      const rightBtn = container.querySelector('.scroll-btn.right');
 
-        scrollContainer.addEventListener('mouseleave', () => {
-          leftBtn.classList.remove('visible');
-          rightBtn.classList.remove('visible');
-        });
+      container.addEventListener('mouseenter', () => {
+        leftBtn.classList.add('visible');
+        rightBtn.classList.add('visible');
+      });
 
-        leftBtn.addEventListener('click', () => {
-          container.scrollLeft -= 300;
-        });
+      container.addEventListener('mouseleave', () => {
+        leftBtn.classList.remove('visible');
+        rightBtn.classList.remove('visible');
+      });
 
-        rightBtn.addEventListener('click', () => {
-          container.scrollLeft += 300;
-        });
-      }
+      leftBtn.addEventListener('click', () => {
+        track.scrollLeft -= 300;
+      });
+
+      rightBtn.addEventListener('click', () => {
+        track.scrollLeft += 300;
+      });
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
