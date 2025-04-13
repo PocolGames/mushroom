@@ -71,11 +71,11 @@
     /*타이틀 시작*/
     .products-title {
       text-align: left;
-      padding: 20px 40px;
-      margin-top: 100px;
+      padding: 10px 20px 0px;
     }
+
     .products-title h2 {
-      font-size: 32px;
+      font-size: 28x;
       margin-bottom: 10px;
       font-weight: 700;
     }
@@ -129,39 +129,40 @@
       margin: 0 auto;
     }
 
+    /*버튼_시작*/
     .scroll-btn {
       position: absolute;
-      top: 30%;
-      transform: translateY(-30%);
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.3);
+      top: 0;
+      bottom: 0;
+      width: 32px; /* ⬅ 좌우 폭을 더 줄였습니다 */
+      background: rgba(0, 0, 0, 0.2); /* ⬅ 어두운 반투명 배경으로 구분도 살림 */
+      color: white;
       border: none;
-      font-size: 28px;
+      font-size: 20px;
       cursor: pointer;
-      padding: 30px 6px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease, background 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
     .scroll-btn.visible {
       opacity: 1;
       pointer-events: auto;
     }
-
     .scroll-btn:hover {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(0, 0, 0, 0.5); /* ⬅ hover 시 더 강조 */
     }
-
     .scroll-btn.left {
       left: 0;
     }
-
     .scroll-btn.right {
       right: 0;
     }
+
+    /*버튼 끝*/
 
     footer {
       text-align: left;
@@ -191,8 +192,7 @@
   </section>
 
   <section class="products-title">
-    <h2>🔥 지금 인기 있는 아이템</h2>
-    <p>유저들이 직접 제작한 독창적인 NFT 아이템들을 둘러보세요.</p>
+    <h2>지금 인기 있는 아이템</h2>
   </section>
 
   <section class="products-scroll">
@@ -216,7 +216,6 @@
 
   <section class="products-title">
     <h2>조회 수 급상승 아이템</h2>
-    <p>최근 조회 수가 가장 많은 NFT 아이템들을 둘러보세요.</p>
   </section>
 
   <section class="products-scroll">
@@ -233,6 +232,50 @@
         <div class="product"><img src="image/07m.png"><h2>제품명 7</h2><p>설명</p></div>
         <div class="product"><img src="image/08m.png"><h2>제품명 8</h2><p>설명</p></div>
         <div class="product"><img src="image/09m.png"><h2>제품명 9</h2><p>설명</p></div>
+      </div>
+      <button class="scroll-btn right">&gt;</button>
+    </div>
+  </section>
+
+  <section class="products-title">
+    <h2>인기 컬렉션</h2>
+  </section>
+
+  <section class="products-scroll">
+    <div class="scroll-container">
+      <button class="scroll-btn left">&lt;</button>
+      <div class="product-track">
+        <!-- 제품 카드 예시 -->
+        <div class="product"><img src="image/01m.png"><h2>제품명 1</h2><p>설명</p></div>
+        <div class="product"><img src="image/02m.png"><h2>제품명 2</h2><p>설명</p></div>
+        <div class="product"><img src="image/03m.png"><h2>제품명 3</h2><p>설명</p></div>
+        <div class="product"><img src="image/04m.png"><h2>제품명 4</h2><p>설명</p></div>
+        <div class="product"><img src="image/05m.png"><h2>제품명 5</h2><p>설명</p></div>
+        <div class="product"><img src="image/06m.png"><h2>제품명 6</h2><p>설명</p></div>
+        <div class="product"><img src="image/07m.png"><h2>제품명 7</h2><p>설명</p></div>
+        <div class="product"><img src="image/08m.png"><h2>제품명 8</h2><p>설명</p></div>
+        <div class="product"><img src="image/09m.png"><h2>제품명 9</h2><p>설명</p></div>
+      </div>
+      <button class="scroll-btn right">&gt;</button>
+    </div>
+  </section>
+
+  <section class="products-title">
+    <h2>NFT 관련 기본 개념념</h2>
+  </section>
+
+  <section class="products-scroll">
+    <div class="scroll-container">
+      <button class="scroll-btn left">&lt;</button>
+      <div class="product-track">
+        <!-- 제품 카드 예시 -->
+        <div class="product"><img src=".png"><h2>NFT란 무엇일까요?</h2><p>설명</p></div>
+        <div class="product"><img src=".png"><h2>NFT를 구매하는 방법</h2><p>설명</p></div>
+        <div class="product"><img src=".png"><h2>발행(mint)이란 무엇입니까?</h2><p>설명</p></div>
+        <div class="product"><img src=".png"><h2>Steam 계정 연동 방법법</h2><p>설명</p></div>
+        <div class="product"><img src=".png"><h2>Web3에서 보안을 유지하는 방법</h2><p>설명</p></div>
+        <div class="product"><img src=".png"><h2>블록체인 포크란 무엇인가요?</h2><p>설명</p></div>
+        <div class="product"><img src=".png"><h2>NFT를 만드는 방법법</h2><p>설명</p></div>
       </div>
       <button class="scroll-btn right">&gt;</button>
     </div>
