@@ -19,15 +19,16 @@
     </nav>
   </header>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-name">&copy; 2018218051 컴퓨터학부 3학년 이은수. | Web Programming Term Project. </div>
-        <div class="footer-contact">
-            <span class="phone">📞 010-6876-1121</span>
-            <span class="dot">•</span>
-            <a class="email" href="mailto:dldmstn0409@gmail.com">dldmstn0409@gmail.com</a>
-        </div>
-    </div>
-</footer>
+  <!-- footer.html을 로드할 위치 -->
+  <div id="footer-container"></div>
+  
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
 </body>
 </html>

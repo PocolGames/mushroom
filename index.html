@@ -237,6 +237,7 @@
     </div>
   </section>
 
+  <!-- footer.html을 로드할 위치 -->
   <div id="footer-container"></div>
 
 <script>
@@ -267,9 +268,8 @@
     });
   });
 
-
-
   
+  // footer.html을 로드하여 footer-container에 삽입
   fetch('footer.html')
     .then(res => res.text())
     .then(data => {
