@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>상품 판매 페이지</title>
+  <link rel="stylesheet" href="css/footer.css">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -283,14 +284,20 @@
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 모든 권리 보유.</p>
-  </footer>
+<footer>
+    <div class="footer-container">
+        <div class="footer-name">&copy; 2018218051 컴퓨터학부 3학년 이은수. | Web Programming Term Project. </div>
+        <div class="footer-contact">
+            <span class="phone">📞 010-6876-1121</span>
+            <span class="dot">•</span>
+            <a class="email" href="mailto:dldmstn0409@gmail.com">dldmstn0409@gmail.com</a>
+        </div>
+    </div>
+</footer>
 
-  <<script>
-    document.addEventListener('DOMContentLoaded', function () {
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
     const containers = document.querySelectorAll('.scroll-container');
-
     containers.forEach(container => {
       const track = container.querySelector('.product-track');
       const leftBtn = container.querySelector('.scroll-btn.left');
@@ -316,6 +323,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
